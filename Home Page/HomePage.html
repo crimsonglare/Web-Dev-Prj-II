@@ -9,12 +9,10 @@
          </head>
         <body>
             <nav class="Navbar">
+                <a1 href="HomePage.html" class="Logo">
+                    <span class="link-text">Task Titan</span>
+                </a1>
                 <ul class="Navbar-nav">
-                     <li class="Logo">
-                        <a1 href="HomePage.html" class="nav-link">
-                            <span class="link-text">Task Titan</span>
-                        </a1>
-                    </li>
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <span class="link-text">Tasks</span>
@@ -25,7 +23,7 @@
                             <span class="link-text">Inventory</span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item"> 
                         <a href="#" class="nav-link">
                             <span class="link-text">Shop</span>
                         </a>
@@ -35,18 +33,86 @@
                             <span class="link-text">Help</span>
                         </a>
                     </li>
-                    <li class="button">
-                        <span class="user"><button class="btn"><ion-icon name="person-outline"></ion-icon></button>
-                        </span>
-                    </li>
-                </ul>    
+                    
+                </ul>
+                <div class="button">
+                    <button class="btn"><ion-icon name="person-outline"></ion-icon></button>
+                </div>
+                <div id="dropdown" class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>    
             </nav>
-            <main>
-                <h>PP cool</h>
-                <p>IA A A A  SFDOSUGBVWROVD ASNFIUBVWE
-                </p>
+            <div class="dropdown-menu">
+                <a href="#">Tasks</a>
+                <a href="#">Inventory</a>
+                <a href="#">Shops</a>
+                <a href="#">Help</a>
+                <a href="#">Profile</a>
+            </div>
+            <div class="homegif">
+                <div class="art"></div>
+            </div>
+            <main class="main"> 
+                    <div class="container">
+                            <h1 class="Todo">Todo List</h1>
+                            <!-- Error message -->
+                            <div class="alert-message"></div>
+                            <div class="input-section">
+                                <input type="text" placeholder="Add a todo . . ." class="input input-bordered input-secondary w-full max-w-xs" />
+                                <input type="date" class="input input-bordered input-secondary w-full max-w-xs schedule-date" />
+                                <button class="btn btn-secondary add-task-button">
+                                    <ion-icon name="add-outline"></ion-icon>
+                                    <i class="bx bx-plus bx-sm"></i>
+                                </button>
+                                <button class="btn btn-secondary delete-all-btn">
+                                    <ion-icon name="trash-outline"></ion-icon>
+                                </button>
+                            </div>
+                
+                            <table class="table w-full" style="color: darkgray;">
+                                <thead>
+                                    <tr>
+                                        <th>Task</th>
+                                        <th>Due Date</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="todos-list-body">
+                                </tbody>
+                            </table>
+                
+                    </div>
+               
+
+
+            
+                <div class="container">
+                        <h1 class="Todo">Habit Tracker</h1>
+                        <div class="HabitInput">
+                            <!-- Textbox to add task -->
+                            <input type="text" id="taskInput" class="Habittext" placeholder="Enter task">
+                            
+                            <!-- Plus button to add more rows -->
+                            <button class="add-button" onclick="addRow()"><ion-icon name="add-outline"></ion-icon></button>
+                        </div>    
+                            <table class="myTable" id="myTable">
+                                <thead>
+                                <tr>
+                                    <th>Task</th>
+                                    <th>Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                            
+                </div>
+            
             </main>
-            <script src="script.js"></script>
+            <script src="HomeJs.js"></script>
+            <script src="Script.js"></script>
+            <script src="HabitTracker.js"></script>
             <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
             <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
         </body>
